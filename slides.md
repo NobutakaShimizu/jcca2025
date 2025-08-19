@@ -61,7 +61,7 @@ color: amber-light
 
 <v-clicks>
 
-- 「行列積の近似アルゴリズムと厳密アルゴリズムの等価性を**誤り訂正符号**を使って示した」という論文
+- 行列積の近似と誤り訂正に関する研究
 - 2025年のSTOCとICALPに採択
   - **STOC (Symposium on Theory of Computing)**: 理論計算機科学の最高難易度の国際会議
   - 組合せ論の計算量理論(の周辺)への応用に関する論文がとても多い
@@ -109,7 +109,7 @@ color: amber-light
 |:--:|:--|:--|
 | 1981 | $2.496$ | [Coppersmith, Winograd](https://ieeexplore.ieee.org/document/4568320) |
 | 1986 | $2.479$ | [Strassen](https://ieeexplore.ieee.org/document/4568194) |
-| **1990** | $2.3755$ | [Coppersmith, Winograd](https://www.sciencedirect.com/science/article/pii/S0747717108800132?via%3Dihub) |
+| 1990 | $2.3755$ | [Coppersmith, Winograd](https://www.sciencedirect.com/science/article/pii/S0747717108800132?via%3Dihub) |
 | 2010 | $2.3737$ | [Stothers](https://era.ed.ac.uk/handle/1842/4734) |
 | 2012 | $2.3729$ | [Williams](https://dl.acm.org/doi/10.1145/2213977.2214056) |
 
@@ -122,7 +122,7 @@ color: amber-light
 | 2020 | $2.3728596$ | [Alman, Williams](https://theoretics.episciences.org/14213) |
 | 2022 | $2.371866$ | [Duan, Wu, Zhou](https://ieeexplore.ieee.org/document/10353208) |
 | 2024 | $2.371552$ | [Williams, Xu, Xu, and Zhou](https://epubs.siam.org/doi/10.1137/1.9781611977912.134) |
-| **2025** | $2.371339$ | [Alman, Duan, Williams, Xu, Xu, and Zhou](https://epubs.siam.org/doi/10.1137/1.9781611978322.63) |
+| 2025 | $2.371339$ | [Alman, Duan, Williams, Xu, Xu, and Zhou](https://epubs.siam.org/doi/10.1137/1.9781611978322.63) |
 
 </div>
 </div>
@@ -196,7 +196,7 @@ color: amber-light
 
 <figcaption style="text-align: center; font-size: 0.8em; color: #666;">
 
-0.0046 / 35年 の改善率が持続すると, $O(n^2)$時間まであと3122年かかる. とても難しい問題.
+0.0046 / 35年 の改善率が持続すると, $O(n^2)$時間まであと3122年かかる. 人類にはまだ早い.
 
 </figcaption>
 </figure>
@@ -232,7 +232,12 @@ $AB$と $\textcolor{c2185b}{\alpha \cdot n^2}$個の成分が一致するもの�
 - $\alpha = 1$は通常の(平均時)行列積
 - $\alpha = \frac{1}{\abs{\F}}$なら簡単 (ランダムな行列を出力すればよい)
 - 「非自明なアルゴリズム」: $\alpha \ge \frac{1}{\abs{\F}} + \varepsilon$ を達成
-- 本発表: 常に$|\F|$は定数 ($\F$上の算術演算の計算量は無視).
+
+<div class="topic-box">
+
+本発表: オーダーは$n\to\infty$**のみ**の漸近. それ以外($\abs{\F}$や$\varepsilon$など)は$n$に依存しない定数
+
+</div>
 
 <div class="question">
 
@@ -388,7 +393,7 @@ color: amber-light
   
 - 後続研究: $\varepsilon$への依存度の改善
   - <a class="cite-reference" href="https://arxiv.org/abs/2502.13065">\[Vaikuntanathan, Zamir, '25\]</a> (ただし, Learning with Parityの計算量的困難性に依拠)
-  - \[Shinkar, Singh, RANDOM'25]: 我々の$2^{2^{\poly(1/\varepsilon)}}$を$2^{\poly(1/\varepsilon)}$に改善
+  - \[Shinkar, Singh, RANDOM'25\]: 我々の$2^{2^{\poly(1/\varepsilon)}}$を$2^{\poly(1/\varepsilon)}$に改善
 
 
 </v-clicks>
@@ -865,4 +870,5 @@ color: amber-light
   - 例: $\abs{\F} \ge n/\alpha$のとき, リードソロモン符号+テンソル符号 <a href="https://dl.acm.org/doi/10.1145/3717823.3718244" class="cite-reference">\[Hirahara, Shimizu, STOC'25\]</a>
 - 今後の方向性
   - **実数**上の行列積で同様のことができないか? (実用的には実数上の行列積が主流のはず)
-  - $\varepsilon$への依存度の改善 (後続研究で改善)
+    - どのような定式化が良いか?
+  - $\varepsilon$への依存度の改善 <a class="cite-reference" href="https://arxiv.org/abs/2502.13065">\[Vaikuntanathan, Zamir, '25\]</a>, \[Shinkar, Singh, RANDOM'25\]
