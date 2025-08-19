@@ -162,6 +162,7 @@ xychart-beta
     y-axis 2 --> 3
     line [3, 2.807, 2.795, 2.779, 2.522, 2.517, 2.496, 2.479, 2.3755, 2.3737, 2.3729, 2.3728639, 2.3728596, 2.371866, 2.371552, 2.371339]
 ```
+
 </div>
 
 <style>
@@ -220,7 +221,7 @@ color: amber-light
 ::content::
 
 
-<div class="topic-box">
+<div class="question">
 
 入力として与えられた二つの**一様ランダム**な行列 $A,B\sim\mathbb{F}^{n\times n}$ に対して, 行列$C\in\mathbb{F}^{n\times n}$であって,
 $AB$と $\textcolor{c2185b}{\alpha \cdot n^2}$個の成分が一致するものを(何でもよいので)計算せよ.
@@ -235,7 +236,7 @@ $AB$と $\textcolor{c2185b}{\alpha \cdot n^2}$個の成分が一致するもの�
 
 <div class="topic-box">
 
-本発表: オーダーは$n\to\infty$**のみ**の漸近. それ以外($\abs{\F}$や$\varepsilon$など)は$n$に依存しない定数
+本発表: オーダーは **$n\to\infty$のみ** の漸近. それ以外($\abs{\F}$や$\varepsilon$など)は$n$に依存しない定数
 
 </div>
 
@@ -462,16 +463,22 @@ color: amber-light
   - ある符号化関数に対し, $\calC = \Enc(\F^n)$を **(線形)符号** という
   - 常に$N>n$ ($\Enc(z)$は$z$に冗長性を付与する写像)
 
+<v-clicks>
+
+- ベクトル同士の距離: $\dist(x,y) = \frac{1}{n}\sum_{i\in[n]} \mathbf{1}_{x(i)\ne y(i)}$ (ハミング距離)
+- 符号$\calC$の距離: $\delta := \min_{\substack{x\ne y \\x,y\in \calC}}\dist(x,y)$
+  
 
 <div style="display: flex; justify-content: center; align-items: center;">
 
-![code](./images/encoding.svg)
+![code](./images/code.svg)
 
-</div>    
+</div>      
 
-- ベクトル同士の距離: $\dist(x,y) = \frac{1}{n}\sum_{i\in[n]} \mathbf{1}_{x(i)\ne y(i)}$ (ハミング距離)
-  - $\ball(x,\rho)$ : 半径$\rho$, 中心$x$のハミングボール
-- 符号$\calC$の距離: $\delta := \min_{\substack{x\ne y \\x,y\in \calC}}\dist(x,y)$
+
+- $\mathrm{ball}(x,\rho) = \{ y\in\F^n\colon \dist(x,y)\le\rho \}$: 中心$x$半径$\rho$のハミングボール
+
+</v-clicks>
 
 ---
 layout: top-title
@@ -615,7 +622,7 @@ color: amber-light
 - 事実: レートが十分小さいランダムな線形符号を考えれば, $\delta\approx 1-\frac{1}{|\F|}$であり, whpで
   - $\rho \le \frac{\delta}{2}-\varepsilon$ならば一意復号可能
   - $\rho \le \delta - \varepsilon$ならばリスト復号可能
-
+    - $\rho > \delta$ならば, リストサイズが$2^{\Omega(n)}$になってしまう
 - ランダムな符号を考えれば, 大体の場合は最適なパラメータを達成 (例外あり)
 
 </v-clicks>
@@ -758,9 +765,9 @@ color: amber-light
 
 <v-clicks>  
 
-- グラフの次数$d$の歩数$\ell$が定数ならば, **レートは$\Omega(1)$**
+- グラフの次数$d$と歩数$\ell$が定数ならば, **レートは$\Omega(1)$**
 
-- 任意の定数 $\varepsilon>0$ に対し, **半径 $\rho=1-\frac{1}{\abs{\F}}-\varepsilon$** で 「近似」リスト復号が可能 <a href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.APPROX/RANDOM.2023.60" class="cite-reference">\[Jeronimo, RANDOM'23\]</a>
+- 任意の定数 $\varepsilon>0$ に対し**半径 $\rho=1-\frac{1}{\abs{\F}}-\varepsilon$** で 効率的に「近似」リスト復号が可能 <a href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.APPROX/RANDOM.2023.60" class="cite-reference">\[Jeronimo, RANDOM'23\]</a>
   - 計算時間は$2^{2^{\poly(1/\varepsilon)}}\cdot |V|(\log |V|)^{O(1)}$
   - $\varepsilon$への依存度は大きい (Frieze-Kannanの弱正則化補題)
 - 符号化 $z \mapsto \Enc(z)$ の計算も$O(|V|)$時間でできる
@@ -821,7 +828,7 @@ color: amber-light
 
 <figcaption style="text-align: center; font-size: 0.8em; color: #666;">
 
-行列$A'$は$\abs{W}\times kn$行列となる. 第$\mathbf{i}=(i_1,\dots,i_k)$行目には, $A$の第$i_1$行ベクトル, 第$i_2$行ベクトル, ... を並べる.
+行列$A'$は$\abs{W}\times \ell n$行列となる. 第$\mathbf{i}=(i_1,\dots,i_\ell)$行目には, $A$の第$i_1$行ベクトル, 第$i_2$行ベクトル, ... を並べる.
 <br>
 $B'$は$B$に対し, 行と列を入れ替えて同じ操作を行って構成する.
 
@@ -845,8 +852,8 @@ color: amber-light
 
 </div>
 
-- $A'B' \in \F^{W\times W}$の第$(\mathbf{i},\mathbf{j})$成分は, $(AB)_{i_1,j_1} + \dots + (AB)_{i_k,j_k}$に一致する ($\mathbf{i},\mathbf{j}$は$G$上のウォーク)
-- これは, テンソル積$G^2$上のウォーク$(i_1,j_1)\to \dots \to (i_k,j_k)$に沿った和とみなせる.
+- $A'B' \in \F^{W\times W}$の第$(\mathbf{i},\mathbf{j})$成分は, $(AB)_{i_1,j_1} + \dots + (AB)_{i_\ell,j_\ell}$に一致する ($\mathbf{i},\mathbf{j}$は$G$上のウォーク)
+- これは, テンソル積$G^2$上のウォーク$(i_1,j_1)\to \dots \to (i_\ell,j_\ell)$に沿った和とみなせる.
 - すなわち, $AB$を, **$G^2$上のエクスパンダーウォーク符号**で符号化したものとみなせる.
 
 ---
