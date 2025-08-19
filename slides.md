@@ -44,6 +44,11 @@ color: amber-light
 
 # トークの内容
 
+<div class="qr-code-fixed">
+  <QRCode value="https://nobutakashimizu.github.io/jcca2025/1" :size="80" render-as="svg"/>
+</div>
+
+
 ::content::
 
 <div class="topic-box">
@@ -71,6 +76,10 @@ color: amber-light
 ::title::
 
 # 行列積
+
+<div class="qr-code-fixed">
+  <QRCode value="https://nobutakashimizu.github.io/jcca2025/3" :size="80" render-as="svg"/>
+</div>
 
 ::content::
 
@@ -133,6 +142,10 @@ color: amber-light
 
 # 行列積の計算量の推移
 
+<div class="qr-code-fixed">
+  <QRCode value="https://nobutakashimizu.github.io/jcca2025/4" :size="80" render-as="svg"/>
+</div>
+
 ::content::
 
 <div style="width: 60%; margin: 0 auto;">
@@ -169,6 +182,10 @@ color: amber-light
 
 # 行列積の計算量の推移
 
+<div class="qr-code-fixed">
+  <QRCode value="https://nobutakashimizu.github.io/jcca2025/5" :size="80" render-as="svg"/>
+</div>
+
 ::content::
 
 <div style="width: 80%; margin: 0 auto;">
@@ -195,6 +212,10 @@ color: amber-light
 ::title::
 
 # 行列積の近似
+
+<div class="qr-code-fixed">
+  <QRCode value="https://nobutakashimizu.github.io/jcca2025/6" :size="80" render-as="svg"/>
+</div>
 
 ::content::
 
@@ -230,6 +251,10 @@ color: amber-light
 
 # 動機
 
+<div class="qr-code-fixed">
+  <QRCode value="https://nobutakashimizu.github.io/jcca2025/7" :size="80" render-as="svg"/>
+</div>
+
 ::content::
 
 - 高速行列積の多くのアルゴリズムは非実用的
@@ -264,6 +289,10 @@ color: amber-light
 ::title::
 
 # 問題設定
+
+<div class="qr-code-fixed">
+  <QRCode value="https://nobutakashimizu.github.io/jcca2025/8" :size="80" render-as="svg"/>
+</div>
 
 ::content::
 
@@ -302,6 +331,10 @@ color: amber-light
 
 # 主結果
 
+<div class="qr-code-fixed">
+  <QRCode value="https://nobutakashimizu.github.io/jcca2025/9" :size="80" render-as="svg"/>
+</div>
+
 ::content::
 
 <div class="theorem">
@@ -334,6 +367,10 @@ color: amber-light
 
 # 関連結果
 
+<div class="qr-code-fixed">
+  <QRCode value="https://nobutakashimizu.github.io/jcca2025/10" :size="80" render-as="svg"/>
+</div>
+
 ::content::
 
 
@@ -365,6 +402,10 @@ color: amber-light
 
 # アイデア: 行列の符号化
 
+<div class="qr-code-fixed">
+  <QRCode value="https://nobutakashimizu.github.io/jcca2025/11" :size="80" render-as="svg"/>
+</div>
+
 ::content::
 
 任意の$A,B\in\F^{n\times n}$に対して$\agr(M(A,B),AB)\ge \alpha$であるとする (最悪時の設定)
@@ -392,6 +433,10 @@ color: amber-light
 
 # アルゴリズム的誤り訂正符号の入門
 
+<div class="qr-code-fixed">
+  <QRCode value="https://nobutakashimizu.github.io/jcca2025/12" :size="80" render-as="svg"/>
+</div>
+
 
 ---
 layout: top-title
@@ -401,6 +446,10 @@ color: amber-light
 ::title::
 
 # 符号の基礎
+
+<div class="qr-code-fixed">
+  <QRCode value="https://nobutakashimizu.github.io/jcca2025/13" :size="80" render-as="svg"/>
+</div>
 
 ::content::
 
@@ -427,6 +476,10 @@ color: amber-light
 ::title::
 
 # 符号の基礎 (一意復号)
+
+<div class="qr-code-fixed">
+  <QRCode value="https://nobutakashimizu.github.io/jcca2025/14" :size="80" render-as="svg"/>
+</div>
 
 ::content::
 
@@ -466,6 +519,10 @@ color: amber-light
 
 # 符号の基礎 (一意復号の限界)
 
+<div class="qr-code-fixed">
+  <QRCode value="https://nobutakashimizu.github.io/jcca2025/15" :size="80" render-as="svg"/>
+</div>
+
 ::content::
 
 - 符号の距離が$\delta$であるとき, $\rho\le \delta/2$でなければならない
@@ -495,6 +552,10 @@ color: amber-light
 ::title::
 
 # 符号の基礎 (リスト復号)
+
+<div class="qr-code-fixed">
+  <QRCode value="https://nobutakashimizu.github.io/jcca2025/16" :size="80" render-as="svg"/>
+</div>
 
 ::content::
 
@@ -529,6 +590,10 @@ color: amber-light
 
 # 符号の基礎 (リスト復号の限界)
 
+<div class="qr-code-fixed">
+  <QRCode value="https://nobutakashimizu.github.io/jcca2025/17" :size="80" render-as="svg"/>
+</div>
+
 ::content::
 
 - 半径$\rho$とリストサイズ$L$にはトレードオフがある
@@ -559,6 +624,10 @@ color: amber-light
 
 # アルゴリズム的側面
 
+<div class="qr-code-fixed">
+  <QRCode value="https://nobutakashimizu.github.io/jcca2025/18" :size="80" render-as="svg"/>
+</div>
+
 ::content::
 
 - リスト復号アルゴリズム: $y\in \F^N$を入力として受け取り, $\dist(y,\Enc(x))\le \rho$を満たす$x$を**全て**出力
@@ -588,12 +657,20 @@ color: amber-light
 
 # 行列の符号化
 
+<div class="qr-code-fixed">
+  <QRCode value="https://nobutakashimizu.github.io/jcca2025/19" :size="80" render-as="svg"/>
+</div>
+
 ---
 layout: top-title
 color: amber-light
 ---
 ::title::
 # エクスパンダーグラフに基づく符号
+
+<div class="qr-code-fixed">
+  <QRCode value="https://nobutakashimizu.github.io/jcca2025/20" :size="80" render-as="svg"/>
+</div>
 ::content::
 
 <div class="definition">
@@ -627,6 +704,10 @@ color: amber-light
 ---
 ::title::
 # エクスパンダーグラフに基づく符号
+
+<div class="qr-code-fixed">
+  <QRCode value="https://nobutakashimizu.github.io/jcca2025/21" :size="80" render-as="svg"/>
+</div>
 ::content::
 
 <div class="definition">
@@ -662,6 +743,10 @@ color: amber-light
 
 # エクスパンダーウォーク符号の性質
 
+<div class="qr-code-fixed">
+  <QRCode value="https://nobutakashimizu.github.io/jcca2025/22" :size="80" render-as="svg"/>
+</div>
+
 ::content::
 
 - $\Enc\colon \F^V \to \F^W$ をエクスパンダーウォーク符号とする
@@ -692,6 +777,10 @@ color: amber-light
 
 ::title::
 # 帰着の全体図
+
+<div class="qr-code-fixed">
+  <QRCode value="https://nobutakashimizu.github.io/jcca2025/23" :size="80" render-as="svg"/>
+</div>
 ::content::
 
 <div style="display: flex; justify-content: center; align-items: center;">
@@ -713,6 +802,10 @@ color: amber-light
 ---
 ::title::
 # 行列$A',B'$の構成
+
+<div class="qr-code-fixed">
+  <QRCode value="https://nobutakashimizu.github.io/jcca2025/24" :size="80" render-as="svg"/>
+</div>
 ::content::
 
 <div style="display: flex; justify-content: center; align-items: center;">
@@ -735,6 +828,10 @@ color: amber-light
 ---
 ::title::
 # 行列$A',B'$の構成
+
+<div class="qr-code-fixed">
+  <QRCode value="https://nobutakashimizu.github.io/jcca2025/25" :size="80" render-as="svg"/>
+</div>
 ::content::
 
 <div style="display: flex; justify-content: center; align-items: center;">
@@ -754,6 +851,10 @@ color: amber-light
 ::title::
 
 # まとめ
+
+<div class="qr-code-fixed">
+  <QRCode value="https://nobutakashimizu.github.io/jcca2025/26" :size="80" render-as="svg"/>
+</div>
 
 ::content::
 
