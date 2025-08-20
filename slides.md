@@ -64,7 +64,7 @@ color: amber-light
 - 行列積の近似と誤り訂正に関する研究
 - 2025年のSTOCとICALPに採択
   - **STOC (Symposium on Theory of Computing)**: 理論計算機科学の最高難易度の国際会議
-  - 組合せ論の計算量理論(の周辺)への応用に関する論文がとても多い
+  - 組合せ論の計算機科学への応用に関する論文がとても多い
     - キーワード: 擬似ランダムネス, 誤り訂正符号, エクスパンダー, 加法的組合せ論, etc
 </v-clicks>
 
@@ -236,7 +236,7 @@ $AB$と $\textcolor{c2185b}{\alpha \cdot n^2}$個の成分が一致するもの�
 
 <div class="topic-box">
 
-本発表: オーダーは **$n\to\infty$のみ** の漸近. それ以外($\abs{\F}$や$\varepsilon$など)は$n$に依存しない定数
+本発表: オーダーは **$n\to\infty$** の漸近. それ以外($\abs{\F}$や$\varepsilon$など)は$n$に依存しない定数
 
 </div>
 
